@@ -2,10 +2,16 @@
 
 ## Homebrew Formulae to @openaq-cli binaries, powered by @openaq
 
+- **Add tap**
+
+    ```bash
+    brew tap openaq/homebrew-tap
+    ```
+
 - **Install**
 
     ```bash
-    scoop bucket add openaq-bucket https://github.com/openaq/scoop-bucket
+    brew install openaq-cli
     ```
 ## Usage
 https://github.com/openaq/openaq-cli#usage
