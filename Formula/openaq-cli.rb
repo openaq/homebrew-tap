@@ -5,21 +5,21 @@
 class OpenaqCli < Formula
   desc "Official Command Line Interface for OpenAQ."
   homepage "https://openaq.org"
-  version "0.4.8-rc"
+  version "0.4.9-rc"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.8-rc/openaq-cli_Darwin_x86_64.tar.gz"
-      sha256 "3df9377d1482061755360357d418f30bd35bb9ec600018d47ed850c113faa64d"
+      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.9-rc/openaq-cli_Darwin_x86_64.tar.gz"
+      sha256 "ab8c7b6887868740d528d633416468292a2d021f608156c50266f9ab45856199"
 
       def install
         bin.install "openaq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.8-rc/openaq-cli_Darwin_arm64.tar.gz"
-      sha256 "5b7109a05a0c88bc1217a93dbac4eb9525b24ed5fa02d5acc63e795eeb070e4a"
+      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.9-rc/openaq-cli_Darwin_arm64.tar.gz"
+      sha256 "b4eee784b80ff0e1bf5ba9b31a24e69915a40827cd96396b69e9bd26410a571f"
 
       def install
         bin.install "openaq"
@@ -29,16 +29,16 @@ class OpenaqCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.8-rc/openaq-cli_Linux_x86_64.tar.gz"
-      sha256 "9c8fb29d47f85fea2a8bffa491e218d4d839457cec6d02713ff183dcbb201f76"
+      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.9-rc/openaq-cli_Linux_x86_64.tar.gz"
+      sha256 "c35bdf85af6fe431c1ae457d59b7d01aae0cac6c4077b5d116afbda6b4306b59"
 
       def install
         bin.install "openaq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.8-rc/openaq-cli_Linux_arm64.tar.gz"
-      sha256 "e715bd03d8f254fbc1a2e39b701388c6db9c70b25216d257e89adf1522a8baff"
+      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.9-rc/openaq-cli_Linux_arm64.tar.gz"
+      sha256 "8502242faec46ee4f40fb9961d8b16f4c895c5b65f1bea0d46016b9f4932b11e"
 
       def install
         bin.install "openaq"
