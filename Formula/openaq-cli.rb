@@ -5,21 +5,21 @@
 class OpenaqCli < Formula
   desc "Official Command Line Interface for OpenAQ."
   homepage "https://openaq.org"
-  version "0.4.0-rc"
+  version "0.4.1-rc"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.0-rc/openaq-cli_0.4.0-rc_darwin_amd64.tar.gz"
-      sha256 "f8fb56c7dbd7e1fe5bd72913996168cd51dcf68a0786cf39972cce2153a1b67d"
+    if Hardware::CPU.arm?
+      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.1-rc/openaq-cli_0.4.1-rc_darwin_arm64.tar.gz"
+      sha256 "104576745ae61a676cee11808117f51ffd22a51f62c31c8c23a8d84e8fb29c59"
 
       def install
         bin.install "openaq"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.0-rc/openaq-cli_0.4.0-rc_darwin_arm64.tar.gz"
-      sha256 "a9023844cf2f85aa551a13b8454bf2a8880c46894ba372b8ee2b52b713a01fd8"
+    if Hardware::CPU.intel?
+      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.1-rc/openaq-cli_0.4.1-rc_darwin_amd64.tar.gz"
+      sha256 "029d024611794189676e66a47296890e674871f603f3af48ba203bea2433ee34"
 
       def install
         bin.install "openaq"
@@ -28,17 +28,17 @@ class OpenaqCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.0-rc/openaq-cli_0.4.0-rc_linux_amd64.tar.gz"
-      sha256 "deec29090409c5a50bc5ab1a161c1e5e521d316ee6188fc9de81a1fd8405480d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.1-rc/openaq-cli_0.4.1-rc_linux_arm64.tar.gz"
+      sha256 "00ac1fcf2567c8e7ac38dd3e11737ba1f4d239e465b33f83f8039ec0df026590"
 
       def install
         bin.install "openaq"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.0-rc/openaq-cli_0.4.0-rc_linux_arm64.tar.gz"
-      sha256 "451ff44cc9054d6ca3dbadf364c3d7fa5a4cba01d120cd1fb7b055e05ffa71b4"
+    if Hardware::CPU.intel?
+      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.1-rc/openaq-cli_0.4.1-rc_linux_amd64.tar.gz"
+      sha256 "b09e3e08b28a01d4f2881d14ad7fb614c3ee31b4ad9a9fa6f9ddc6e84b65c472"
 
       def install
         bin.install "openaq"
