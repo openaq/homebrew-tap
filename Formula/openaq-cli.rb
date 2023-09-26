@@ -5,21 +5,21 @@
 class OpenaqCli < Formula
   desc "Official Command Line Interface for OpenAQ."
   homepage "https://openaq.org"
-  version "0.4.3-rc"
+  version "0.4.8-rc"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.3-rc/openaq-cli_0.4.3-rc_darwin_amd64.tar.gz"
-      sha256 "f47b49626501f847417f451982fb5df15f846ee015e6eb5b9bb104717a0b44a8"
+      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.8-rc/openaq-cli_Darwin_x86_64.tar.gz"
+      sha256 "3df9377d1482061755360357d418f30bd35bb9ec600018d47ed850c113faa64d"
 
       def install
         bin.install "openaq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.3-rc/openaq-cli_0.4.3-rc_darwin_arm64.tar.gz"
-      sha256 "9272dc99badffb10b96788a3903f6481be469279feadb06f9a74501e41ac4641"
+      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.8-rc/openaq-cli_Darwin_arm64.tar.gz"
+      sha256 "5b7109a05a0c88bc1217a93dbac4eb9525b24ed5fa02d5acc63e795eeb070e4a"
 
       def install
         bin.install "openaq"
@@ -28,17 +28,17 @@ class OpenaqCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.3-rc/openaq-cli_0.4.3-rc_linux_arm64.tar.gz"
-      sha256 "9634d6c89a4daecea9e5c8afd4b19c956b1934b757ffe39ef7c4f7208ada0a30"
+    if Hardware::CPU.intel?
+      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.8-rc/openaq-cli_Linux_x86_64.tar.gz"
+      sha256 "9c8fb29d47f85fea2a8bffa491e218d4d839457cec6d02713ff183dcbb201f76"
 
       def install
         bin.install "openaq"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.3-rc/openaq-cli_0.4.3-rc_linux_amd64.tar.gz"
-      sha256 "d9649e558347bec7187a5820512d3069376a14a05f2488b13b16591a21bdf122"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/openaq/openaq-cli/releases/download/v0.4.8-rc/openaq-cli_Linux_arm64.tar.gz"
+      sha256 "e715bd03d8f254fbc1a2e39b701388c6db9c70b25216d257e89adf1522a8baff"
 
       def install
         bin.install "openaq"
