@@ -1,4 +1,4 @@
-# homebrew-tap  [![Powered By: OpenAQ](https://img.shields.io/badge/powered%20by-openaq-green.svg?style=flat-square)](https://github.com/openaq)
+# homebrew-tap  [![Powered By: GoReleaser](https://img.shields.io/badge/powered%20by-goreleaser-green.svg?style=flat-square)](https://github.com/goreleaser)
 
 ## Homebrew Formulae to @openaq CLI binaries, powered by @goreleaser
 
